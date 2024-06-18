@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Nav.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchTerm } from '../../feature/products/productSlice';
 
 const Nav = () => {
 
+    const dispatch = useDispatch();
+    const { searchTerm } = useSelector((state) => state.products);
+
+
+
     const searchHandler = (e) => {
         e.preventDefault();
-        // search(e.target.searchString.value);
+        dispatch(setSearchTerm(e.target.value))
     }
 
 
@@ -32,10 +39,9 @@ const Nav = () => {
                             <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
                     </ul>
-                    <form className="d-flex" onSubmit={searchHandler}>
-                        <input className="form-control me-2" name='searchString' type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
+                    <div className="d-flex" >
+                        <input className="form-control me-2" onChange={searchHandler} name='searchString' type="search" placeholder="Search" aria-label="Search" />
+                    </div>
                 </div>
             </div>
         </nav>

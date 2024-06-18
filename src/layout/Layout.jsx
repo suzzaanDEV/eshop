@@ -11,8 +11,7 @@ const Layout = () => {
     return (
         <div>
             <div className={styles.contentSection}>
-                <div className="row">
-
+                <div className="row w-100">
                     <div className="col-md-3"><Category /></div>
                     <div className="col-md-9"><Proudcts /></div>
                 </div>
