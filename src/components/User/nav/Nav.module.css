@@ -1,0 +1,102 @@
+/* Navbar.css */
+
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: #ffffff; /* Change background color when scrolled */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow when scrolled */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.75) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+.bi-cart-fill {
+    color: #000;
+    font-size: 28px;
+}
+
+.badge.bg-light.text-dark {
+    color: #000 !important;
+}
+
+/* Nav.module.css */
+
+
+.nav-link {
+    color: #FFF1DB; /* Secondary Color */
+}
+
+.login-button {
+    color: #D4BDAC; /* Tertiary Color */
+    border-color: #D4BDAC; /* Tertiary Color */
+}
+
+.register-button {
+    color: #536493; /* Quaternary Color */
+    background-color: #FFF1DB; /* Secondary Color */
+}
+
+
+/* Nav.module.css */
+
+.navbar {
+    position: relative;
+    background-color: transparent; /* Set navbar background to transparent */
+}
+
+.navbar-brand,
+.nav-link,
+.login-button,
+.register-button {
+    color: #FFF1DB; /* Default text color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar-brand:hover,
+.nav-link:hover,
+.login-button:hover,
+.register-button:hover {
+    color: #D4BDAC; /* Hover text color */
+}
+
+.bottom-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px; /* Height of hover effect */
+    background-color: #EF5A6F; /* Color of hover effect */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.navbar:hover .bottom-hover {
+    opacity: 1; /* Show hover effect on navbar hover */
+}
+

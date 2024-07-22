@@ -1,0 +1,39 @@
+/* footer.module.css */
+
+/* Main footer container styles */
+.footer {
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color */
+}
+
+/* List styles */
+.footerList {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Footer links styles */
+.footerLink {
+    color: #6c757d; /* Medium-dark text color */
+    transition: color 0.2s; /* Smooth color transition */
+}
+
+.footerLink:hover {
+    color: #343a40; /* Darker text color on hover */
+}
+
+/* Social icon styles */
+.socialIcon {
+    vertical-align: middle;
+}
+
+/* Contact info styles */
+.contactInfo {
+    font-weight: bold;
+}
+
+/* Bottom section styles */
+.footerBottom {
+    background-color: #e9ecef; /* Lighter background color for bottom section */
+    color: #6c757d; /* Medium-dark text color */
+}

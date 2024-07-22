@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useOutlet, useParams } from 'react-router-dom'
 import styles from "./Details.module.css"
+import {useDispatch} from "react-redux";
+import {addToCart} from "../../../feature/products/cartSlice.jsx";
 
 
 const Details = () => {
     let { item } = useParams();
+    const dispatch = useDispatch();
 
     let [details, setDetails] = useState({});
 
@@ -48,7 +51,7 @@ const Details = () => {
                         <button onClick={() => history.back()} type="button" className="btn btn-secondary">Back</button>
                         <div className='d-flex gap-4'>
                             <button type="button" className="btn btn-primary">Buy Now</button>
-                            <button type="button" className="btn btn-outline-primary">Add to cart</button>
+                            <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch(addToCart(details))}>Add to cart</button>
                         </div>
 
 

@@ -1,0 +1,33 @@
+/* register.module.css */
+
+.register-container {
+    max-width: 400px;
+    margin: 30px auto ;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-container form {
+    margin-bottom: 20px;
+}
+
+.register-container .form-control {
+    margin-bottom: 15px;
+}
+
+.register-container .btn-primary {
+    width: 100%;
+}
+
+.register-container .text-center {
+    margin-top: 10px;
+}

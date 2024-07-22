@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    products: [],
-    searchTerm: '',
-    filteredCategory: 'all'
+        products: [],
+        searchTerm: '',
+        filteredCategory: 'all'
 }
 
 export const productSlice = createSlice({

@@ -1,0 +1,90 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #343a40;
+    color: #ffffff;
+    z-index: 100;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #495057;
+}
+
+.logo h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    background-color: black;
+}
+
+.toggleBtn span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toggleBtn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggleBtn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggleBtn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav {
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.nav li {
+    margin-bottom: 0.5rem;
+}
+
+.nav .link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav .link:hover {
+    background-color: #495057;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+}
